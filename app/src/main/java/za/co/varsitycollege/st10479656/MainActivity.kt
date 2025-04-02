@@ -1,6 +1,7 @@
 package za.co.varsitycollege.st10479656
 
 import android.annotation.SuppressLint
+import android.os.Build.VERSION_CODES
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
@@ -9,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+
 
 
 
@@ -24,10 +26,9 @@ class MainActivity : AppCompatActivity() {
 
         val txt1 = findViewById<TextView>(R.id.txt1)
         val editText = findViewById<EditText>(R.id.editTextText)
-        val btn = findViewById<TextView>(R.id.button)
-
+        val btn = findViewById<TextView>(R.id.button) // changed to button
         val textView2 = findViewById<TextView>(R.id.textView2)
-        val resetButton = findViewById<TextView>(R.id.resetButton)
+        val resetButton = findViewById<TextView>(R.id.resetButton) //changed to button
 
 
         btn.setOnClickListener {
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         // reset button fun
         resetButton.setOnClickListener {
-                 textView2.text ="" //clear the TextView
+                 textView2.text = "" //clear the TextView
                 editText.text.clear() //clear EditText
                 Toast.makeText(this,"Reset Successful",Toast.LENGTH_SHORT).show()
 
